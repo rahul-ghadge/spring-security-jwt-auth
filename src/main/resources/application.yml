@@ -1,0 +1,29 @@
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/emp
+    username: postgres
+    password: root
+
+  jpa:
+    properties:
+      hibernate:
+        # The SQL dialect makes Hibernate generate better SQL for the chosen database
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # Hibernate ddl auto (create, create-drop, validate, update)
+        ddl-auto: update
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        # Hibernate will look for schema
+        default_schema: public
+
+
+# Enable to print variables
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        type: trace
